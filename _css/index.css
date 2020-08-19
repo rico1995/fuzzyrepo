@@ -1,0 +1,41 @@
+/* background */
+
+/* background */
+
+
+
+.hex-grid__list {
+    --amount: 5;
+    display: grid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(var(--amount), 1fr, 2fr) 1fr;
+}
+.hex-grid__item {
+    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    height: 0;
+    padding-bottom: 100%;
+}
+.hex-grid__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.hex-grid__item:nth-of-type(n + 6) {
+    --counter: 2;
+}
+
+.hex-grid__item:nth-of-type(n + 11) {
+    --counter: 3;
+}
+
+.hex-grid__item:nth-of-type(n + 16) {
+    --counter: 4;
+}
